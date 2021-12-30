@@ -1,10 +1,10 @@
-///////////////// BOT VERIFADOR //////////////////////
+/////////////////// BOT VERIFICADOR //////////////////////
 const Discord = require("discord.js");;
 const { Client, Intentsl} = require('discord.js');
 const client = new Client({ intents:32767 });
 
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`El bot ${client.user.tag}! está Listo`);
 });
 
 client.on("message", msg => {
