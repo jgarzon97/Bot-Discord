@@ -13,20 +13,22 @@ client.on("message", msg => {
   }
 });
 /*
- * input: msj de verificación 'Acepto'
- * output: asigna el rol 'Usuario'
- */ 
+* Condición de acceso, ingresar el ID del canal (sala de espera)
+*/
 client.on("message", message => {
-  if(message.channel.id === "889002423895592980"){
+  if(message.channel.id === " - Esta es la entrada de la categoría, ingresa el ID - "){
     if(message.author.bot) return;
-    
+    /*
+     * input: msj de verificación 'Acepto'
+     * output: asigna el rol 'Usuario' (antes de eso crear el rol 'Usuario')
+     */ 
     if(message.content === "Acepto"){
-      message.member.roles.add("889003414602792990");
+      message.member.roles.add(" - Aquí va el ID del rol de tu servidor - ");
       message.author.send("Gracias por verificarte");
       message.delete();
     }
     else{
-      message.author.send("Tienes problemas? Habla con un admin.");
+      message.author.send("Tienes problemas? Habla con el admin.");
       message.delete();
     }
   }
@@ -34,4 +36,4 @@ client.on("message", message => {
 /*
  * token: ID Bot
  */
-client.login("ODg4ODM1NDI2OTE4NDk4MzM0.YUYefw.CvlfBEApJdrzIOM29JM7Wh6PwqU");
+client.login(" - Aquí va el token de tu bot - ");
